@@ -1,0 +1,38 @@
+<div>
+  <div class="row bgForm">
+    <% @pictures.each do |picture| %>
+      <div class="col-md-3 col-xs-3 bgDivTest">
+
+        <img>
+        <div class="row">
+          <div class="sizeText">
+            <%= picture.title %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="sizeText">
+            <%= picture.desc %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-xs-2 col-md-offset-3 col-xs-offset-3 setMargin">
+            <%= link_to t('.albums.index.edit'), edit_picture_path(picture) %>
+          </div>
+          <div class="col-md-2 col-xs-2 setMargin">
+            <%= link_to t('.albums.index.delete'), picture_path(picture), data: {confirm: t('.str_delete')}, method: :delete %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+ <!--  <div class="row">
+    <div class="col-md-offset-5 col-xs-offset-5 col-xs-2 col-md-2">
+      <% if @album %>
+        <%= link_to 'abc', new_album_picture_path %>
+      <% end %>
+    </div>
+
+  </div> -->
+
+</div>

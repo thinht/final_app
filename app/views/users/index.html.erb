@@ -1,0 +1,30 @@
+<div class="row bgForm">
+    <% @users.each do |user| %>
+    <div class="col-md-3 col-xs-3 bgDivTest">
+
+      <div class="row">
+        <div class="sizeText">
+          <%= user.name %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2 col-md-offset-3 col-xs-offset-3 setMargin">
+          <!-- <%= link_to t('users.index.edit'), edit_user_path(user) %> -->
+           <%= link_to t('.albums.index.edit'), edit_user_path(user) %>
+        </div>
+        <div class="col-md-2 col-xs-2 setMargin">
+          <%= link_to t('.albums.index.show'), user_albums_path(user) %>
+        </div>
+        <div class="col-md-2 col-xs-2 setMargin">
+          <%= link_to t('.albums.index.delete'), user_path(user), data: {confirm: t('.str_delete')}, method: :delete %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div>
+      <%= paginate @users %>
+    </div>
+  </div>

@@ -1,0 +1,92 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  albums:
+    form:
+      title: Title Album
+      desc: Description
+      public: Public
+
+    edit:
+      title_edit_album: Edit Album
+
+    index:
+      edit: Edit
+      show: Show
+      delete: Delete
+      str_delete: Are you sure?
+      new_album: New Album
+      pictures_private: Pictures Private
+      pictures_public: Pictures Public
+
+    new:
+      title_create_album: Create Album
+
+  home:
+    index:
+      list_user: List User
+      current_user: Current User
+      sign_out: Sign Out
+      sign_in: Sign In
+      sign_up: Sign Up
+
+  notifications:
+    another:
+      title_welcome: Welcome to example.com
+
+  pictures:
+    edit:
+      title_edit_picture: Edit Picture
+
+    index:
+      new_picture: New Picture
+      str_delete: Are you sure?
+
+    new:
+      title_create_picture: Create Picture
+
+  users:
+    dashboard:
+      str_delete: Are you sure?
+    index:
+      str_delete: Are you sure?
+    show:
+      str_delete: Are you sure?
+
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+

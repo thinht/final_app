@@ -1,0 +1,15 @@
+<div class="row">
+  <div>
+    <%= form_for @user, url: user_path do |form| %>
+
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+
+    <% end %>
+  </div>
+</div>
