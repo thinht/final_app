@@ -9,6 +9,11 @@
 
   <%= link_to t('.sign_in'),  user_session_path %><br>
   <%= link_to t('.sign_up'), new_user_registration_path %><br>
+<% end %>
 
+<% @albums.each do |a| %>
+  <% a.pictures.each do |p| %>
+    <p><%= p.title %></p>
+  <% end %>
 <% end %>
 

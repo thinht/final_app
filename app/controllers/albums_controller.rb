@@ -1,7 +1,8 @@
 class AlbumsController < ApplicationController
   def index
     @user = User.find params[:user_id]
-    @albums = @user.albums.page(params[:page]).per(2)
+    @albums = @user.albums.page(params[:page]).per(10)
+    #@album = User.includes(:albums).where("id = ?", @user.id).page(params[:page]).per(10).references(:albums)
   end
 
   def new
