@@ -2,6 +2,7 @@ class UsersController < ApplicationController
    # POST /users
   # POST /users.json
   # paginates_per 2
+  before_action :get_user, only: [:show, :edit, :update]
 
   def create
     @user = User.new(params[:user])
@@ -30,15 +31,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id]
+
   end
 
   def edit
-    @user = User.find params[:id]
+
   end
 
   def update
-    @user = User.find params[:id]
     @user.update(user_params)
     redirect_to users_path
     UserMailer.welcome_email.deliver_now
@@ -47,5 +47,9 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name)
+    end
+
+    def get_user
+      @user = User.find params[:id]
     end
 end
